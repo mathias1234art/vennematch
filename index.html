@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f5ff">
+  <title>VenneMatch – finn folk med samme interesser</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="VenneMatch hjem"><span class="brand-icon">✦</span> VenneMatch</a>
+    <nav>
+      <a href="#oppdag">Oppdag</a>
+      <a href="#hvordan">Slik fungerer det</a>
+      <button class="button button-small" id="openProfileTop">Lag profil <span>＋</span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="sparkle">✦</span> Nye vennskap starter her</div>
+        <h1>Finn folk som<br>føles <span class="gradient-text">som dine folk.</span></h1>
+        <p>Fortell litt om deg selv, finn mennesker med samme interesser, og bygg vennskap i ditt eget tempo.</p>
+        <div class="hero-actions">
+          <a class="button" href="#oppdag">Finn venner <span>→</span></a>
+          <button class="button button-ghost" id="openProfileHero">Lag min profil</button>
+        </div>
+        <div class="social-proof"><div class="avatar-stack"><span>🌻</span><span>🎧</span><span>🛹</span><span>🎨</span></div><span><strong>Små interesser.</strong> Store vennskap.</span></div>
+      </div>
+      <div class="hero-art" aria-label="Illustrasjon av vennskap">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="floating-note note-one">🎵 Musikk</div><div class="floating-note note-two">☕ Prate lenge</div>
+        <div class="floating-note note-three">🎮 Gaming</div>
+        <div class="hero-blob"><div class="blob-face">☺</div><span class="blob-star star-a">✦</span><span class="blob-star star-b">✧</span></div>
+        <div class="mini-card"><div class="mini-avatars"><span>🧑🏻‍🎨</span><span>🧑🏽‍💻</span></div><div><strong>Felles interesser</strong><small>Et fint sted å begynne</small></div><span class="heart">♡</span></div>
+      </div>
+    </section>
+
+    <section class="how-section" id="hvordan">
+      <div class="section-heading"><span class="eyebrow">ENKELT OG UFORMELT</span><h2>Vennskap, på din måte.</h2><p>Du trenger ikke være superutadvendt. Start med det du liker.</p></div>
+      <div class="steps">
+        <article class="step"><div class="step-icon lavender">✍️</div><span class="step-number">01</span><h3>Fortell om deg selv</h3><p>Skriv en liten beskrivelse og velg interessene dine.</p></article>
+        <article class="step"><div class="step-icon peach">🧩</div><span class="step-number">02</span><h3>Finn felles ting</h3><p>Se profiler med interesser, hobbyer og personlighet som passer deg.</p></article>
+        <article class="step"><div class="step-icon mint">💬</div><span class="step-number">03</span><h3>Ta første steg</h3><p>Vis interesse og start med et enkelt spørsmål om noe dere liker.</p></article>
+      </div>
+    </section>
+
+    <section class="discover-section" id="oppdag">
+      <div class="discover-header">
+        <div><span class="eyebrow">DITT VENNEUNIVERS</span><h2>Hvem klikker du med?</h2><p>Demo-profiler du kan utforske – lag din egen for å teste matchingen.</p></div>
+        <button class="button" id="openProfileDiscover">＋ Lag profil</button>
+      </div>
+      <div class="filter-bar">
+        <label class="search-wrap"><span>⌕</span><input id="searchInput" type="search" placeholder="Søk på interesser eller navn..." aria-label="Søk på interesser eller navn"></label>
+        <select id="interestFilter" aria-label="Filtrer etter interesse"><option value="">Alle interesser</option><option>Musikk</option><option>Gaming</option><option>Kreativ</option><option>Friluft</option><option>Sport</option><option>Film og serier</option><option>Bøker</option><option>Dyr</option></select>
+        <select id="vibeFilter" aria-label="Filtrer etter personlighet"><option value="">Alle typer</option><option value="Rolig">Rolig</option><option value="Sosial">Sosial</option><option value="Kreativ">Kreativ</option><option value="Eventyrlysten">Eventyrlysten</option></select>
+      </div>
+      <div id="profileGrid" class="profile-grid"></div>
+      <div id="emptyState" class="empty-state hidden"><div>🔎</div><h3>Ingen treff akkurat nå</h3><p>Prøv et annet søk eller fjern et filter.</p><button class="button button-ghost" id="clearFilters">Nullstill filtre</button></div>
+      <p class="demo-note"><span>ⓘ</span> Dette er en lokal demo. Profilene lagres bare i nettleseren din; det finnes ingen ekte brukere eller chat i denne versjonen.</p>
+    </section>
+
+    <section class="cta-section">
+      <div class="cta-spark">✦</div><div><span class="eyebrow">DIN TUR</span><h2>Det er plass til akkurat deg.</h2><p>En god venn trenger ikke være lik deg i alt. Det holder å finne noe å starte med.</p></div><button class="button button-light" id="openProfileBottom">Lag profilen min <span>→</span></button>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#"><span class="brand-icon">✦</span> VenneMatch</a><p>Laget for vennskap, felles interesser og gode samtaler.</p><div class="footer-links"><a href="#hvordan">Slik fungerer det</a><a href="#trygghet">Trygghet</a></div><div id="trygghet" class="safety-note">Tips: Ikke del adresse, telefonnummer, skole eller andre private opplysninger i en offentlig profil. Møt nye personer på en trygg måte og snakk med en voksen du stoler på hvis noe føles feil.</div><small>© 2026 VenneMatch · En skole-/prototype-demo</small></footer>
+
+  <dialog id="profileDialog">
+    <form id="profileForm" method="dialog">
+      <div class="modal-heading"><div><span class="eyebrow">DIN PROFIL</span><h2>La folk bli litt kjent med deg</h2></div><button type="button" class="close-button" id="closeDialog" aria-label="Lukk">×</button></div>
+      <p class="modal-intro">Hold det hyggelig og del bare det du er komfortabel med.</p>
+      <label class="field-label" for="profileName">Hva skal vi kalle deg?</label><input id="profileName" name="name" maxlength="24" placeholder="F.eks. Alex" required>
+      <label class="field-label" for="profileBio">Litt om deg</label><textarea id="profileBio" name="bio" maxlength="240" rows="3" placeholder="Jeg liker å tegne, høre på musikk og finne nye kaféer..." required></textarea><div class="char-count"><span id="bioCount">0</span>/240</div>
+      <label class="field-label" for="profileVibe">Hvilken vibe passer deg?</label><select id="profileVibe" name="vibe"><option>Rolig</option><option>Sosial</option><option>Kreativ</option><option>Eventyrlysten</option></select>
+      <span class="field-label">Velg interessene dine (minst én)</span>
+      <div class="interest-choices" id="interestChoices"></div>
+      <label class="field-label" for="profileEmoji">Velg en profilfigur</label><select id="profileEmoji" name="emoji"><option>🌻</option><option>🎧</option><option>🎨</option><option>🛹</option><option>🐸</option><option>🌙</option><option>🐈</option><option>🪴</option></select>
+      <p class="form-error" id="formError" role="alert"></p>
+      <div class="modal-actions"><button type="button" class="button button-ghost" id="cancelDialog">Avbryt</button><button type="submit" class="button">Lagre profil <span>✓</span></button></div>
+      <p class="privacy-mini">Profilen lagres på denne enheten med localStorage. Ikke skriv inn kontaktinformasjon.</p>
+    </form>
+  </dialog>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
